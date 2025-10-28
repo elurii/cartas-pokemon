@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-10-2025 a las 10:38:02
+-- Tiempo de generación: 28-10-2025 a las 20:55:01
 -- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Versión de PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,8 +20,19 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `pokedaw`
 --
-CREATE DATABASE IF NOT EXISTS `pokedaw` DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci;
-USE `pokedaw`;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cartas`
+--
+
+CREATE TABLE `cartas` (
+  `usuario` varchar(255) NOT NULL,
+  `idCarta` int(11) NOT NULL,
+  `nombreCarta` varchar(255) NOT NULL,
+  `fotoCarta` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -49,10 +60,37 @@ INSERT INTO `usuarios` (`email`, `pass`, `nombre`, `rol`) VALUES
 --
 
 --
+-- Indices de la tabla `cartas`
+--
+ALTER TABLE `cartas`
+  ADD PRIMARY KEY (`idCarta`),
+  ADD KEY `usuario` (`usuario`);
+
+--
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`email`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `cartas`
+--
+ALTER TABLE `cartas`
+  MODIFY `idCarta` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `cartas`
+--
+ALTER TABLE `cartas`
+  ADD CONSTRAINT `cartas_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `usuarios` (`email`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -6,7 +6,6 @@
                 <div class="col-auto mt-1">
                     <img class="m-0" src="img/superball.png" style="width:150px">
                 </div>
-                <div class="col-auto mt-1 ms-4"></div>
                 <div class="w-100"></div>
             </div>
         </div>

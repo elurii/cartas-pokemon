@@ -11,8 +11,8 @@
 	<script src="./Bootstrap/js/bootstrap.bundle.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
 	<link href="styles.css" rel="stylesheet">
-	<link rel="icon" type="image/x-icon" href="img/grifo.ico">
-	<title>Pokemon Tipo Agua</title>
+	<link rel="icon" type="image/x-icon" href="img/superball.png">
+	<title>Pokedaw</title>
 </head>
 
 <body>
@@ -34,6 +34,7 @@
 					$_SESSION['name']=$row["nombre"];
 					header("LOCATION:normal/indexNormal.php");
 				} else if ($row["rol"] == 1) {
+					$_SESSION['name']=$row["nombre"];
 					header("LOCATION:admin/indexAdmin.php");
 				} else {
 					$sms = "Rol incorrecto, consulte con el administrador";
@@ -93,9 +94,11 @@
 		</div>
 	</section>
 	<!--Pie de página-->
+	
 	<?php
 	include("footer.php");
 	?>
+	
 </body>
 
 </html>

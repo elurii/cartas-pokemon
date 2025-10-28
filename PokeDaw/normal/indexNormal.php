@@ -15,8 +15,8 @@
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
 	<link href="../styles.css" rel="stylesheet">
-	<link rel="icon" type="image/x-icon" href="../img/grifo.ico">
-	<title>GESTIÓN - CES VEGA MEDIA</title>
+	<link rel="icon" type="image/x-icon" href="../img/superball.png">
+	<title>NORMAL-pokedaw</title>
 
 
 </head>
@@ -55,7 +55,7 @@
 
 	<?php
 
-	include("../footer.php");
+	include("footerNormal.php");
 	
 
 	?>

@@ -3,6 +3,10 @@
 /*GENERAL*/
 section{
 	background-color: #C2D5E4;
+	flex-grow: 1;
+	display: flex;
+    justify-content: center; 
+    align-items: center;
 }
 .titulos{		 
 	border-radius:8px;	
@@ -32,6 +36,13 @@ section{
 	font-size: 9pt;
 }
 
+body {
+    display: flex;
+    flex-direction: column; /* Apila los 3 hijos (header, section, footer) en vertical */
+    min-height: 100vh;     /* El body ocupa como mínimo el 100% de la altura de la ventana */
+    margin: 0;             /* Quita márgenes por defecto */
+}
+
 
 /*HEADER*/
 .cabecera{
@@ -52,11 +63,11 @@ section{
 }
 
 .izq{
-	background-image: linear-gradient(to right,#065A9C, #E64556);
+	background-image: linear-gradient(to right,#E64556, #E64556);
 	height: 5px;
 }
 .der{
-	background-image: linear-gradient(to right, #E64556,#065A9C);
+	background-image: linear-gradient(to right, #E64556,#E64556);
 	height: 5px;
 }
 .v{
@@ -72,6 +83,7 @@ section{
 .footer1{
 	background-image: linear-gradient(180deg,#065A9C, #065A9C);	
 	color:white;
+	margin-bottom: 0;
 }
 .footer2{
 	background-color: #0077BC;

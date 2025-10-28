@@ -2,7 +2,7 @@
 	include("config.php");
 
 ?>
- <footer>
+	<footer>
 		<div class="container-fluid ">
 			<div class="row justify-content-center footer1">
 				

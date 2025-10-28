@@ -1,3 +1,6 @@
+<?php
+	include("seguridadAdmin.php");
+?>
 <!DOCTYPE html>
 <html>
 
@@ -12,37 +15,18 @@
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
 	<link href="../styles.css" rel="stylesheet">
-	<link rel="icon" type="image/x-icon" href="../img/grifo.ico">
-	<title>GESTIÓN - CES VEGA MEDIA</title>
+	<link rel="icon" type="image/x-icon" href="../img/superball.png">
+	<title>ADMIN-pokedaw</title>
 
 
 </head>
 
 <body>
-	<h1>ADMIN</h1>
-
+	
 	<!--Cabecera-->
-	<div class="container-fluid cabecera">
-		<header class="row justify-content-center align-items-center">
-			<div class="d-none d-md-block col-4  p-0 izq mt-4"></div>
-			<div class="col-12 col-md-4">
-				<div class="row justify-content-center align-items-center">
-					<div class="col-auto mt-1">
-						<img class="m-0" src="../img/GRIFO11.png" style="width:50px">
-					</div>
-					<div class="col-auto">
-						<p class="text-center m-0"><span class="v"> V</span><span class="me">M</span></p>
-					</div>
-					<div class="col-auto mt-1 ms-4"></div>
-					<div class="w-100"></div>
-				</div>
-			</div>
-			<div class="d-none d-md-block col-4 p-0 der mt-4"></div>
-			<div class="col-12 mb-1">
-				<p class="h1 text-center">GESTIÓN CES - VEGA MEDIA</p>
-			</div>
-		</header>
-	</div>
+	<?php
+	include("headerAdmin.php")
+	?>
 
 	<!--Barra de navegación-->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="main_navbar">
@@ -228,35 +212,23 @@
 				<div class="col-9 col-sm-8 col-md-6 col-xl-4 mb-5 mt-3">
 					<div class="row justify justify-content-center titulos mt-5 mb-4">
 						<div class="col-12 mt-5">
-							<p class="h2 text-center">ACCEDE A TU CUENTA</p>
+							<p class="h2 text-center">WELCOME <?php echo $_SESSION['name']; ?></p>
 						</div>
 						<div class="col-8 mt-4">
 							<div class="row">
-								<form action="">
-									<div class="col-12">
-										<input type="text" class="form-control" placeholder="NIF">
-										<span class="form-text text-muted small">EJ: 12345678X</span>
-									</div>
-									<div class="col-12 mt-3 mb-2">
-										<input type="password" class="form-control" id="pass" name="pass" placeholder="CONTRASEÑA">
-									</div>
-									<div class="col-12 mt-4 d-grid mb-5">
-										<button class="btn btn-lg" type="submit">INICIAR SESIÓN</button>
-									</div>
-								</form>
+								<h1>Soy Administrador</h1>
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-12 mb-1">
-							<p class="text-center cuenta">¿NECESITAS UNA CUENTA?</p>
-							<a class="btn w-100" href="registro.html" role="buttom">REGÍSTRATE</a>
-						</div>
-					</div>
+
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<?php
+		include("footerAdmin.php");
+	?>
 
 
 	<script src="./Bootstrap/js/bootnavbar.js"></script>
